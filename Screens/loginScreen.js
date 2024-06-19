@@ -1,5 +1,5 @@
 import {React, useState} from 'react';
-import { View, Text , StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import { View, Text , StyleSheet, TextInput, TouchableOpacity , Image} from 'react-native';
 
 
 const LoginScreen = ({navigation}) => {
@@ -39,9 +39,22 @@ const LoginScreen = ({navigation}) => {
             </View>
 
             <View style={styles.continueSection}>
-                <View style={styles.horizontalLine}></View>
+                <View style={styles.horizontalLine}/>
                 <Text>Or continue with</Text>
-                <View style={styles.horizontalLine}></View>
+                <View style={styles.horizontalLine}/>
+            </View>
+
+            <View style={styles.signinLogos}>
+                <Image source={require('../assets/apple.png')} style={styles.logo} />
+                <Image source={require('../assets/google.png')} style={styles.logo} />
+                <Image source={require('../assets/facebook.png')} style={styles.logo} />
+            </View>
+
+            <View style={styles.signUp}>
+                <Text>Don't have an account?</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')}>
+                    <Text style={styles.signUp}>Sign Up</Text>
+                </TouchableOpacity>
             </View>
 
         </View>
@@ -65,22 +78,22 @@ const styles = StyleSheet.create({
     },
 
     welcome:{
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: 'bold',
         color: '#0D0D26',
-        marginBottom: 20
+        marginBottom: 10,
     },
 
     apply:{
-        fontSize: 20,
-        fontWeight: 'bold',
+        fontSize: 10,
+        fontWeight: 'ultralight',
         color: '#000000',
         marginBottom: 20
     },
     nameInput: {
         height: 52,
         borderColor: '#000000',
-        borderWidth: 1,
+        borderWidth: 0.5,
         borderRadius: 10,
         marginBottom: 20,
         paddingLeft: 10,
@@ -96,7 +109,7 @@ const styles = StyleSheet.create({
         height: 52,
         width:327,
         borderColor: '#000000',
-        borderWidth: 1,
+        borderWidth: 0.5,
         borderRadius: 10,
         marginBottom: 20,
         paddingLeft: 10,
@@ -123,6 +136,47 @@ const styles = StyleSheet.create({
         color: '#ffff',
         fontSize: 20,
         fontWeight: 'bold',
+    },
+    continueSection: {
+        flexDirection:'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 20,
+        marginBottom: 20,
+    },
+    horizontalLine: {
+        width:110,
+        height: 0.5,
+        backgroundColor: '#000000',
+        marginVertical: 10,
+        opacity: 0.5,
+        marginHorizontal: 10,
+    },
+    signinLogos: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding:20,
+        marginTop: 20,
+        marginBottom: 20,
+    },
+
+    logo: {
+        width: 30,
+        height: 30,
+        marginHorizontal: 20,
+    },
+
+    signUp: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 20,
+        marginBottom: 20,
+        color: '#356899',
+        fontWeight: 'bold',
+
+
     },
 })
 
