@@ -19,14 +19,16 @@ const LoginScreen = ({navigation}) => {
                 <View>
                     <View>
                         <TextInput style={styles.nameInput}
-                        placeholder='Name' 
+                        placeholder='Name'
+                        placeholderTextColor='#9c9598' 
                         value={name}
                         onChangeText={setName}
                         />
                     </View>
                     <View>
                         <TextInput style={styles.mailInput}
-                        placeholder='Email' 
+                        placeholder='Email'
+                        placeholderTextColor='#9c9598' 
                         value={email}
                         onChangeText={setEmail}
                         />

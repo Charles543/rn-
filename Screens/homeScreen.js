@@ -90,12 +90,12 @@ const featuredJobs = [
 
 const popularJobs = [
     {
-        id: 1,
+        id: 11,
         image: require('../assets/burger-king.png'),
         title: 'Jr Executive',
         location: 'Los Angelos,US',
         company:'Facebook',
-        salary: '$180,000/y',
+        salary: '$200,000/y',
     },
 
     {
@@ -104,7 +104,7 @@ const popularJobs = [
         title: 'Product Manager',
         location: 'Florida,US',
         company:'Beats',
-        salary: '$180,000/y',
+        salary: '$190,000/y',
     },
 
     {
@@ -113,7 +113,7 @@ const popularJobs = [
         title: 'Product Manager',
         location: 'Florida,US',
         company:'Facebook',
-        salary: '$180,000/y',
+        salary: '$120,000/y',
     },
 
     {
@@ -122,7 +122,7 @@ const popularJobs = [
         title: 'Software Engineer',
         location: 'Tokyo,Japan',
         company:'Apple',
-        salary: '$180,000/y',
+        salary: '$110,000/y',
     },
 
     {
@@ -149,7 +149,7 @@ const popularJobs = [
         title: 'MIS manager',
         location: 'Madrid,Spain',
         company:'Facebook',
-        salary: '$180,000/y',
+        salary: '$140,000/y',
     },
 
     {
@@ -158,7 +158,7 @@ const popularJobs = [
         title: 'Systems engineer',
         location: 'Ghana, Accra',
         company:'Samsung',
-        salary: '$180,000/y',
+        salary: '$130,000/y',
     },
 
     {
@@ -167,7 +167,7 @@ const popularJobs = [
         title: 'Systems engineer',
         location: 'Ghana, Accra',
         company:'Facebook',
-        salary: '$180,000/y',
+        salary: '$170,000/y',
     },
 
 ]
@@ -233,7 +233,7 @@ const HomeScreen = ({route}) => {
                 </View>
             </View>
 
-            <View style={styles.searchSection}>
+            <View style={styles.searchSection}> 
                 <TextInput placeholder='Search a Job or Position' placeholderTextColor='#9c9598'/>
                 <View >
                     <Image source={require('../assets/filter.png')} style={styles.filterIcon} />
